@@ -5,13 +5,20 @@ package com.hospital.model;/*
  */
 
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
 /**
  *
  * @author Ricardo
  */
+@DatabaseTable(tableName="Medicamento")
 public class Medicamento {
-    private String nome;
+    @DatabaseField(generatedId = true)
     private int idMedicamento;
+    @DatabaseField
+    private String nome;
+
 
     public String getNome() {
         return nome;

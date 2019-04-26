@@ -1,9 +1,12 @@
-package com.hospital.model;/*
+package com.hospitalandroid.modelo;/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
+
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 
 import java.sql.Date;
 
@@ -11,9 +14,15 @@ import java.sql.Date;
  *
  * @author Ricardo
  */
+@DatabaseTable(tableName="Funcionario")
 public class Funcionario {
-    private int idFuncionario,idTipoFuncionario;
+    @DatabaseField(generatedId = true)
+    private int idFuncionario;
+    @DatabaseField(foreign = true)
+    private int idTipoFuncionario;
+    @DatabaseField
     private String NOME,CPF,EMAIL,CONTATO;
+    @DatabaseField
     private Date dataNascimento;
 
     public int getIdFuncionario() {

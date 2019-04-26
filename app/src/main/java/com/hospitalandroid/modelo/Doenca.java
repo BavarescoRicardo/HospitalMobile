@@ -4,14 +4,18 @@ package com.hospitalandroid.modelo;/*
  * and open the template in the editor.
  */
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
 /**
  *
  * @author Ricardo
  */
-
+@DatabaseTable(tableName="Doenca")
 public class Doenca {
-
+    @DatabaseField(generatedId = true)
     private int idDoenca;
+    @DatabaseField
     private String nome;
 
     public Doenca() {

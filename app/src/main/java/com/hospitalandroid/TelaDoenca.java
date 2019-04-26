@@ -1,13 +1,13 @@
 package com.hospitalandroid;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
-public class ActvDoen extends AppCompatActivity {
+public class TelaDoenca extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_actv_doenca);
+        setContentView(R.layout.activity_tela_doenca);
     }
 }
