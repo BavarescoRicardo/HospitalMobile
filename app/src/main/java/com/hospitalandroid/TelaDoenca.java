@@ -4,9 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.hospitalandroid.db.DatabaseHelper;
 import com.hospitalandroid.db.DoencaDB;
@@ -24,6 +26,7 @@ public class TelaDoenca extends AppCompatActivity {
     private DatabaseHelper dh;
     private DoencaDB db;
     private List<Doenca> lista;
+    private ArrayAdapter<Doenca> doencaAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,14 +53,33 @@ public class TelaDoenca extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 inclusao();
+
             }
         });
+
+        listar();
+
     }
 
 
     private void listar(){
-
         lista = new ArrayList<Doenca>();
+
+        try {
+            db = new DoencaDB(dh.getConnectionSource());
+            lista = db.queryForAll();
+            doencaAdapter = new ArrayAdapter<Doenca>(TelaDoenca.this,android.R.layout.simple_list_item_1,lista);
+            /*
+            for (Doenca d : lista){
+                Toast.makeText(TelaDoenca.this,"Doenca  "+d.getNome(),Toast.LENGTH_LONG).show();
+            }
+            */
+            tabela.setAdapter(doencaAdapter);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
 
     }
 
@@ -68,6 +90,9 @@ public class TelaDoenca extends AppCompatActivity {
             db = new DoencaDB(dh.getConnectionSource());
             // incluir no bd
             db.create(doenca);
+            txtDoenca.setText("");
+            Log.i("Script","Doenca inluida");
+            Toast.makeText(TelaDoenca.this,"Sucesso",Toast.LENGTH_SHORT).show();
 
 
         } catch (SQLException e) {

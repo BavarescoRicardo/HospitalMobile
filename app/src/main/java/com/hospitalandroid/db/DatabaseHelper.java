@@ -13,7 +13,7 @@ import java.sql.SQLException;
 public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 
     private static final String databaseName = "hospital.db";
-    private static final int databaseVersion = 14;
+    private static final int databaseVersion = 16;
 
 
 
@@ -25,7 +25,6 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase, ConnectionSource cs) {
         try {
             TableUtils.createTable(cs, Doenca.class);
-            TableUtils.createTable(cs, Funcionario.class);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -37,7 +36,8 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 
         try {
             TableUtils.dropTable(cs, Doenca.class,true);
-            TableUtils.dropTable(cs, Funcionario.class,true);
+            //incluir os demais modelos
+
             onCreate(sqLiteDatabase,cs);
 
         } catch (SQLException e) {
