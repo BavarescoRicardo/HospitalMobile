@@ -14,15 +14,15 @@ import java.sql.Date;
  *
  * @author Ricardo
  */
-@DatabaseTable(tableName="Funcionario")
+//@DatabaseTable(tableName="Funcionario")
 public class Funcionario {
-    @DatabaseField(generatedId = true)
+  //  @DatabaseField(generatedId = true)
     private int idFuncionario;
-    @DatabaseField(foreign = true)
+    //@DatabaseField(foreign = true)
     private int idTipoFuncionario;
-    @DatabaseField
+    //@DatabaseField
     private String NOME,CPF,EMAIL,CONTATO;
-    @DatabaseField
+    //@DatabaseField
     private Date dataNascimento;
 
     public int getIdFuncionario() {
