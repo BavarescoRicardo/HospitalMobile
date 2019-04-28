@@ -1,4 +1,4 @@
-package com.hospitalandroid;
+package com.hospitalandroid.telas;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.hospitalandroid.R;
 import com.hospitalandroid.db.DatabaseHelper;
 import com.hospitalandroid.db.DoencaDB;
 import com.hospitalandroid.modelo.Doenca;

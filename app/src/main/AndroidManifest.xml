@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TelaMedicamento"></activity>
-        <activity android:name=".TelaDoenca" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".telas.TelaFuncao"></activity>
+        <activity android:name=".telas.TelaMedicamento" />
+        <activity android:name=".telas.TelaDoenca" />
+        <activity android:name=".telas.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

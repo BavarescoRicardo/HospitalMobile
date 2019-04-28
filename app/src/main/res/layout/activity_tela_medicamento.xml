@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelaMedicamento">
+    tools:context=".telas.TelaMedicamento">
 
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -26,16 +26,6 @@
             android:text="Adicionar Medicamento:"
             android:textAlignment="center"
             android:textColor="@android:color/background_dark"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="serif"
-            android:text="Novo medicamento"
-            android:textAlignment="center"
-            android:textColor="#00635D5D"
             android:textSize="18sp" />
 
         <EditText
