@@ -3,14 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hospital.model;
+package com.hospitalandroid.modelo;
+
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 
 /**
  *
  * @author Ricardo
  */
+
+@DatabaseTable(tableName="TipoFuncionario")
 public class TipoFuncionario {
+
+    @DatabaseField(generatedId = true)
     private int idTipoFuncionario;
+
+    @DatabaseField
     private String descricao;
 
     public int getIdTipoFuncionario() {

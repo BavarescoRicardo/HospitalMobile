@@ -36,6 +36,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnCargo = (Button) findViewById(R.id.btnFuncao);
+        btnCargo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intencao = new Intent(getApplicationContext(),TelaFuncao.class);
+                startActivity(intencao);
+            }
+        });
+
     }
 
 }

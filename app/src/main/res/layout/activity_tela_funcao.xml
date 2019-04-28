@@ -6,4 +6,66 @@
     android:layout_height="match_parent"
     tools:context=".telas.TelaFuncao">
 
+    <LinearLayout
+        android:layout_width="354dp"
+        android:layout_height="636dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="426dp"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/tabelaCargos"
+                android:layout_width="match_parent"
+                android:layout_height="419dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="284dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Adicinar Função"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <EditText
+                android:id="@+id/txtNomeCargo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/btnInserirCargo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inserir" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <Button
+                android:id="@+id/btnVoltarCargo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Voltar" />
+
+        </LinearLayout>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
