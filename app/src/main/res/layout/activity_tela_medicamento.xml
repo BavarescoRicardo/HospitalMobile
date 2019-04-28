@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelaDoenca">
+    tools:context=".TelaMedicamento">
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="379dp"
-        android:layout_height="232dp"
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:focusable="true"
@@ -19,58 +19,66 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
-            android:id="@+id/lbDoenca"
+            android:id="@+id/lbDoenca2"
             android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:text="Adicionar Doenca:"
+            android:layout_height="35dp"
+            android:paddingBottom="5dp"
+            android:text="Adicionar Medicamento:"
             android:textAlignment="center"
             android:textColor="@android:color/background_dark"
             android:textSize="18sp" />
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Novo medicamento"
+            android:textAlignment="center"
+            android:textColor="#00635D5D"
+            android:textSize="18sp" />
+
         <EditText
-            android:id="@+id/txtDoenca"
+            android:id="@+id/txtNomeMedicamento"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:clickable="true"
-            android:contextClickable="false"
             android:cursorVisible="false"
             android:ems="5"
             android:inputType="textPersonName"
-            android:paddingLeft="5dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp" />
+            android:textAlignment="center" />
 
         <Button
-            android:id="@+id/btnInserirDoen"
+            android:id="@+id/btnInserirMed"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:text="Inserir" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="57dp" />
+            android:layout_height="50dp" />
 
         <Button
             android:id="@+id/btnVoltarMed"
             android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:paddingTop="0dp"
-            android:text="Voltar"
-            android:textAlignment="center"
-            android:textSize="18sp" />
+            android:layout_height="45dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Voltar" />
 
     </LinearLayout>
 
     <ListView
-        android:id="@+id/tabelaDoenca"
-        android:layout_width="380dp"
-        android:layout_height="420dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:id="@+id/tabelaMedicamentos"
+        android:layout_width="358dp"
+        android:layout_height="421dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.69" />
+        app:layout_constraintVertical_bias="0.0" />
 </android.support.constraint.ConstraintLayout>

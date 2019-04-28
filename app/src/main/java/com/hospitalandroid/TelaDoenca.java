@@ -39,7 +39,7 @@ public class TelaDoenca extends AppCompatActivity {
         tabela = (ListView) findViewById(R.id.tabelaDoenca);
 
 
-        btnVoltar = (Button) findViewById(R.id.btnVoltar);
+        btnVoltar = (Button) findViewById(R.id.btnVoltarMed);
         btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

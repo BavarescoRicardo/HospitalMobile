@@ -25,5 +25,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnMedicamento = (Button) findViewById(R.id.btnMedicamento);
+        btnMedicamento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intencao = new Intent(getApplicationContext(),TelaMedicamento.class);
+                startActivity(intencao);
+            }
+        });
+
     }
+
 }
