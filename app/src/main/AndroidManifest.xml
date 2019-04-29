@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".telas.TelaFuncao"></activity>
+        <activity android:name=".telas.TelaFuncionario"></activity>
+        <activity android:name=".telas.TelaFuncao" />
         <activity android:name=".telas.TelaMedicamento" />
         <activity android:name=".telas.TelaDoenca" />
         <activity android:name=".telas.MainActivity">

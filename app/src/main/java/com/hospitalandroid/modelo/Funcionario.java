@@ -14,15 +14,15 @@ import java.sql.Date;
  *
  * @author Ricardo
  */
-//@DatabaseTable(tableName="Funcionario")
+@DatabaseTable(tableName="Funcionario")
 public class Funcionario {
-  //  @DatabaseField(generatedId = true)
+    @DatabaseField(generatedId = true)
     private int idFuncionario;
-    //@DatabaseField(foreign = true)
-    private int idTipoFuncionario;
-    //@DatabaseField
+    @DatabaseField(foreign = true)
+    private TipoFuncionario tipoFuncionario;
+    @DatabaseField
     private String NOME,CPF,EMAIL,CONTATO;
-    //@DatabaseField
+    @DatabaseField
     private Date dataNascimento;
 
     public int getIdFuncionario() {
@@ -33,12 +33,12 @@ public class Funcionario {
         this.idFuncionario = idFuncionario;
     }
 
-    public int getIdTipoFuncionario() {
-        return idTipoFuncionario;
+    public TipoFuncionario getTipoFuncionario() {
+        return tipoFuncionario;
     }
 
-    public void setIdTipoFuncionario(int idTipoFuncionario) {
-        this.idTipoFuncionario = idTipoFuncionario;
+    public void setTipoFuncionario(TipoFuncionario tipoFuncionario) {
+        this.tipoFuncionario = tipoFuncionario;
     }
 
     public String getNOME() {
@@ -84,8 +84,8 @@ public class Funcionario {
     public Funcionario() {
     }
 
-    public Funcionario(int idTipoFuncionario, String NOME, String CPF, String EMAIL, Date dataNascimento) {
-        this.idTipoFuncionario = idTipoFuncionario;
+    public Funcionario(TipoFuncionario tipoFuncionario, String NOME, String CPF, String EMAIL, Date dataNascimento) {
+        this.tipoFuncionario = tipoFuncionario;
         this.NOME = NOME;
         this.CPF = CPF;
         this.EMAIL = EMAIL;

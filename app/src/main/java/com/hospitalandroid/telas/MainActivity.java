@@ -45,6 +45,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnFuncionario = (Button) findViewById(R.id.btnFuncionario);
+        btnFuncionario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intencao = new Intent(getApplicationContext(),TelaFuncionario.class);
+                startActivity(intencao);
+            }
+        });
+
     }
 
 }

@@ -27,6 +27,9 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
             TableUtils.createTable(cs, Doenca.class);
             TableUtils.createTable(cs, Medicamento.class);
             TableUtils.createTable(cs, TipoFuncionario.class);
+            TableUtils.createTable(cs, Funcionario.class);
+
+            //incluir os demais modelos
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -40,6 +43,8 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
             TableUtils.dropTable(cs, Doenca.class,true);
             TableUtils.dropTable(cs, Medicamento.class,true);
             TableUtils.dropTable(cs, TipoFuncionario.class,true);
+            TableUtils.dropTable(cs, Funcionario.class,true);
+
             //incluir os demais modelos
 
             onCreate(sqLiteDatabase,cs);
