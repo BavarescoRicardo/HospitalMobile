@@ -8,7 +8,6 @@ package com.hospitalandroid.modelo;/*
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
-import java.sql.Date;
 
 /**
  *
@@ -23,7 +22,7 @@ public class Funcionario {
     @DatabaseField
     private String NOME,CPF,EMAIL,CONTATO;
     @DatabaseField
-    private Date dataNascimento;
+    private String dataNascimento;
 
     public int getIdFuncionario() {
         return idFuncionario;
@@ -73,18 +72,18 @@ public class Funcionario {
         this.EMAIL = EMAIL;
     }
 
-    public Date getDataNascimento() {
+    public String getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
     public Funcionario() {
     }
 
-    public Funcionario(TipoFuncionario tipoFuncionario, String NOME, String CPF, String EMAIL, Date dataNascimento) {
+    public Funcionario(TipoFuncionario tipoFuncionario, String NOME, String CPF, String EMAIL, String dataNascimento) {
         this.tipoFuncionario = tipoFuncionario;
         this.NOME = NOME;
         this.CPF = CPF;
@@ -94,13 +93,9 @@ public class Funcionario {
 
     @Override
     public String toString() {
-        return "Cargo " + idCargo() + "\n NOME   " + NOME + " CPF  " + CPF + "\n EMAIL  " + EMAIL + "\n Data Nascimento " + dataNascimento;
+        return "NOME = " + NOME +
+                "\n CPF= " + CPF +
+                "\n EMAIL = " + EMAIL +
+                "\n Nascimento = " + dataNascimento;
     }
-
-    public String idCargo(){
-
-        
-        return "funcionarioX";
-    }
-    
 }

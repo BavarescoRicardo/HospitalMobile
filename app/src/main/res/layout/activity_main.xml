@@ -11,26 +11,27 @@
         android:layout_width="360dp"
         android:layout_height="307dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.56"
         app:srcCompat="@drawable/fundo" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="416dp"
-        android:layout_height="217dp"
+        android:layout_height="247dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/btnDoen"
@@ -51,10 +52,17 @@
             android:text="Funcionario" />
 
         <Button
+            android:id="@+id/btnListarFuncionarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Listar Funcionarios" />
+
+        <Button
             android:id="@+id/btnFuncao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Funções" />
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

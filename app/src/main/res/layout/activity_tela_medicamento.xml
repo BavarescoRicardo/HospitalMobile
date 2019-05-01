@@ -8,15 +8,16 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="260dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="321dp"
+        android:layout_height="212dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="4dp"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/lbDoenca2"
@@ -31,7 +32,7 @@
         <EditText
             android:id="@+id/txtNomeMedicamento"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
+            android:layout_height="34dp"
             android:clickable="true"
             android:cursorVisible="false"
             android:ems="5"
@@ -48,7 +49,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            android:layout_height="15dp" />
 
         <Button
             android:id="@+id/btnVoltarMed"
@@ -62,13 +63,13 @@
 
     <ListView
         android:id="@+id/tabelaMedicamentos"
-        android:layout_width="358dp"
-        android:layout_height="421dp"
-        android:layout_marginStart="48dp"
+        android:layout_width="299dp"
+        android:layout_height="307dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 </android.support.constraint.ConstraintLayout>

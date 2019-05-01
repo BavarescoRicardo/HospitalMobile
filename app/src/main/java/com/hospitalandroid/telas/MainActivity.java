@@ -10,7 +10,7 @@ import com.hospitalandroid.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnDoenca,btnMedicamento,btnFuncionario,btnCargo;
+    private Button btnDoenca,btnMedicamento,btnFuncionario,btnCargo,btnListarF;
     private Intent intencao;
 
     @Override
@@ -50,6 +50,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 intencao = new Intent(getApplicationContext(),TelaFuncionario.class);
+                startActivity(intencao);
+            }
+        });
+
+        btnListarF = (Button) findViewById(R.id.btnListarFuncionarios);
+        btnListarF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intencao = new Intent(getApplicationContext(),TelaListaFuncionario.class);
                 startActivity(intencao);
             }
         });

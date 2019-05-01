@@ -92,7 +92,7 @@ public class TelaDoenca extends AppCompatActivity {
             // incluir no bd
             db.create(doenca);
             txtDoenca.setText("");
-            Log.i("Script","Doenca inluida");
+            Log.i("Script","Doenca incluida");
             Toast.makeText(TelaDoenca.this,"Sucesso",Toast.LENGTH_SHORT).show();
 
 

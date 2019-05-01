@@ -4,99 +4,99 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".telas.TelaFuncionario">
+    tools:context=".telas.TelaFuncionario" >
 
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="395dp"
-        android:layout_height="715dp"
+    <LinearLayout
+        android:layout_width="414dp"
+        android:layout_height="740dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="401dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/adicionar_funcionario"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </TableLayout>
+            <EditText
+                android:id="@+id/txtNomeFuncionario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:cursorVisible="true"
+                android:editable="true"
+                android:ems="10"
+                android:enabled="true"
+                android:focusable="true"
+                android:hint="Nome"
+                android:inputType="textPersonName"
+                android:textAlignment="center" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="379dp"
-        android:layout_height="262dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+            <CalendarView
+                android:id="@+id/dataNasc"
+                android:layout_width="match_parent"
+                android:layout_height="255dp" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Adicionar funcionario"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimaryDark" />
+            <Spinner
+                android:id="@+id/comboFuncao"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:textAlignment="center" />
 
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:cursorVisible="true"
-            android:editable="true"
-            android:ems="10"
-            android:enabled="true"
-            android:inputType="textPersonName" />
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="EMAIL:"
+                android:inputType="textPersonName"
+                android:textAlignment="center" />
 
-        <Space
-            android:id="@+id/txtNomeFuncionario"
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            <EditText
+                android:id="@+id/txtCpf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="CPF"
+                android:inputType="textPersonName"
+                android:textAlignment="center" />
 
-        <Button
-            android:id="@+id/btnInserirFuncionario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Inserir" />
+            <Button
+                android:id="@+id/btnInserirFuncionario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inserir" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="35dp" />
+            <Button
+                android:id="@+id/btnVoltarFuncionario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Voltar" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/btnVoltarFuncionario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Voltar" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="397dp"
-        android:layout_height="413dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tableLayout">
-
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
