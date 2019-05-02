@@ -17,7 +17,7 @@ import com.j256.ormlite.table.DatabaseTable;
 public class Funcionario {
     @DatabaseField(generatedId = true)
     private int idFuncionario;
-    @DatabaseField(foreign = true)
+    @DatabaseField(foreign = true,foreignAutoCreate = true,foreignAutoRefresh = true)
     private TipoFuncionario tipoFuncionario;
     @DatabaseField
     private String NOME,CPF,EMAIL,CONTATO;
@@ -96,6 +96,7 @@ public class Funcionario {
         return "NOME = " + NOME +
                 "\n CPF= " + CPF +
                 "\n EMAIL = " + EMAIL +
+                "\n CARGO = "+ tipoFuncionario.getDescricao()+
                 "\n Nascimento = " + dataNascimento;
     }
 }

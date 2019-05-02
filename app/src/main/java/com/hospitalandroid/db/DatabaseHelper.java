@@ -13,7 +13,7 @@ import java.sql.SQLException;
 public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 
     private static final String databaseName = "hospital.db";
-    private static final int databaseVersion = 21;
+    private static final int databaseVersion = 22;
 
 
 

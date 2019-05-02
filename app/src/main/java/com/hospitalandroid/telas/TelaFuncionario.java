@@ -71,12 +71,12 @@ public class TelaFuncionario extends AppCompatActivity {
             FuncionarioDB funcionarioBD = new FuncionarioDB(dh.getConnectionSource());
             funcionarioBD.create(funcionario);
 
-            Toast.makeText(TelaFuncionario.this,"Funcionario inserido",Toast.LENGTH_LONG);
+            Toast.makeText(TelaFuncionario.this,"Funcionario inserido ",Toast.LENGTH_LONG);
             txtNome.setText("");
             txtEmail.setText("");
             txtCpf.setText("");
             comboFuncao.setSelected(false);
-            System.out.println("A data escolhida foi  "+dataSq.toString());
+            System.out.println("A data escolhida foi  "+dataSq.toString()+"  E o cargo eh  "+tf.getDescricao()+" "+tf.getIdTipoFuncionario());
         } catch (SQLException e) {
             e.printStackTrace();
         }
